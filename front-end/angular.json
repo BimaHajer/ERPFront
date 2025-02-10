@@ -3,19 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frontEnd": {
+    "front-end": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -35,11 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css",
-              "./node_modules/@cds/city/css/bundles/default.min.css",
-              "./node_modules/normalize.css/normalize.css",
-              "node_modules/@clr/ui/clr-ui.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -71,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "frontEnd:build:production"
+              "buildTarget": "front-end:build:production"
             },
             "development": {
-              "buildTarget": "frontEnd:build:development"
+              "buildTarget": "front-end:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "frontEnd:build"
+            "buildTarget": "front-end:build"
           }
         },
         "test": {
@@ -98,7 +84,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -106,8 +91,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "7511720e-26cf-46db-934a-64db7b17c2bb"
   }
 }
