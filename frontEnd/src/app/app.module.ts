@@ -6,9 +6,9 @@ import { ClarityModule } from '@clr/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'; 
-
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { UserModule } from './user/user.module';
+import { ClientModule } from './client/client.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ClarityModule,RouterModule,
-    CoreModule
+    AppRoutingModule,ClarityModule,RouterModule,UserModule,
+    CoreModule,ClientModule
   ],
   providers: [
     provideAnimationsAsync()
